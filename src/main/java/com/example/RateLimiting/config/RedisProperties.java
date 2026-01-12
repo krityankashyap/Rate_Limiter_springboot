@@ -19,7 +19,8 @@ public class RedisProperties {
     private int timeout= 2000;
 
     @Bean
-    public JedisPool getJedisPool(){ // java client redis library which leads java to communicate with redis server
+    @ConfigurationProperties(prefix = "spring.redis")
+    public  JedisPool getJedisPool(){ // java client redis library which leads java to communicate with redis server
         // JedisPool keeps multiple connections ready to reuse
         JedisPoolConfig poolConfig= new JedisPoolConfig();
 

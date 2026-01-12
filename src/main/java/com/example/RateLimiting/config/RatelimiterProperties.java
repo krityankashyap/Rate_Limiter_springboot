@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class RatelimiterProperties {
 
     private long capacity= 10;
-    private long refillCapacity= 5;
+    private long refillRate= 5;
 
     private String serverURL= "http://localhost:8080";
 
